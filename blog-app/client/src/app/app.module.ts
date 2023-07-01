@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -26,10 +27,10 @@ import {MatButtonModule} from "@angular/material/button";
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
+    MatCardModule,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
-    
+
   ],
   bootstrap: [AppComponent]
 })
