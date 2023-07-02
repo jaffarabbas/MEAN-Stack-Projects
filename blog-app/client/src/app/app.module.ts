@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {MatCardModule} from "@angular/material/card";
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    HttpClientModule
   ],
   providers: [
 
