@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Router} from "@angular/router";
+import { User } from 'src/app/model/user';
+import { UserApiHandlerService } from 'src/app/services/user-api-handler.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,public userApiHandler:UserApiHandlerService,private route:Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -21,8 +24,19 @@ export class LoginComponent {
   onSubmit() {
     // Perform login logic here
     if (this.loginForm.valid) {
-      console.log('Email:', this.loginForm.value.email);
-      console.log('Password:', this.loginForm.value.password);
+     // @ts-ignore
+     let user:User = {
+       email : this.loginForm.value.email,
+       password : this.loginForm.value.password
+     }
+     this.userApiHandler.login(user).then((data)=>{
+        if(data){
+          alert('Login Successfull');
+          this.route.navigate(['/']);
+        }else{
+          alert('Login Failed');
+        }
+     });
     }
   }
 }
