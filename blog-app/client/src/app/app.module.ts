@@ -12,13 +12,17 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {HttpClientModule} from "@angular/common/http";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ToolbarComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -29,7 +33,9 @@ import {HttpClientModule} from "@angular/common/http";
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [
 
