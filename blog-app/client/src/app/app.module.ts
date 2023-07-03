@@ -15,6 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
+import { CreateBlogsComponent } from './components/shared/create-blogs/create-blogs.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { ToolbarComponent } from './components/shared/toolbar/toolbar.component'
     RegisterComponent,
     DashboardComponent,
     ToolbarComponent,
+    CreateBlogsComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -35,10 +38,10 @@ import { ToolbarComponent } from './components/shared/toolbar/toolbar.component'
     MatCardModule,
     HttpClientModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [
-
   ],
   bootstrap: [AppComponent]
 })
