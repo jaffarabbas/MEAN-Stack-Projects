@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Create Post</h2>
+<mat-dialog-content>
+  <form [formGroup]="postForm">
+    <mat-form-field>
+      <input matInput formControlName="title" placeholder="Title">
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput formControlName="content" placeholder="Content">
+    </mat-form-field><br>
+    <mat-form-field>
+      <input matInput formControlName="image" placeholder="Image URL">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+  <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+</mat-dialog-actions>
