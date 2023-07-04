@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as CryptoJS from 'crypto-js';
-import {CryptoHelper} from "../../app/utils/cryptoHelper.js";
+import { CryptoHelper } from '../utils/cryptoHelper';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +13,14 @@ export class LocalStorageService extends CryptoHelper{
 
   setItem(key: string, value: any): void {
     localStorage.setItem(key, this.encrypt(value));
+  }
+
+  setItemWithOutEncryption(key: string, value: any): void {
+    localStorage.setItem(key, value);
+  }
+
+  getItemWithOutEncryption(key: string): any {
+    return localStorage.getItem(key);
   }
 
   getItem(key: string): any {
