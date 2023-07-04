@@ -30,7 +30,7 @@ export class ApiService <T> implements OnInit{
   private getHeaders(token:any): HttpHeaders {
     // Replace with your actual bearer token
     console.log(token);
-    return new HttpHeaders().set('Authorization', `Bearer ${JSON.parse(token)}`);
+    return new HttpHeaders().set('Authorization', `Bearer ${token}`);
   }
 
   getAll(endPoint:string): Observable<T[]> {
