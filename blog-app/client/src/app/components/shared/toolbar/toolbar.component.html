@@ -4,7 +4,7 @@
       <span class="example-spacer"></span>
       <div class="profile"> 
         <span>{{user?.name}}</span>
-      <mat-icon class="example-icon">logout</mat-icon>
+      <mat-icon (click)="logOut()" class="example-icon">logout</mat-icon>
       </div>
     </mat-toolbar-row>
 </mat-toolbar>
